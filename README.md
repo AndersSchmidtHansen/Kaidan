@@ -1,4 +1,4 @@
 Kaidan
 ======
 
-Boilerplate Factory for Ghost Theme Development
+Boilerplate Factory for Ghost Theme Development.
