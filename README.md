@@ -1,3 +1,5 @@
+**Version: Experimental Alpha, use with caution!**
+
 Kaidan (怪談 : "Ghost Story")
 ==============================
 
