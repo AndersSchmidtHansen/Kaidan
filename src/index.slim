@@ -1,0 +1,25 @@
+| {{!< layouts/master }}
+
+| {{#foreach posts}}
+article.post role="article" itemscope="" itemtype="//schema.org/Article"
+
+  header.post__header
+    time.post__date itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
+    h1.post__title itemprop="headline"
+      a href="{{{ url }}}" rel="bookmark" {{ title }}
+
+  section.post__content itemprop="articleBody" {{ excerpt }}...
+  footer.post__footer
+
+    .post__tags
+      | {{#if tags}}
+      .tags itemprop="keywords"
+        span Tags: {{tags separator=", "}}
+      | {{/if}}
+
+| {{/foreach}}
+
+.blog__pagination
+  | {{#if pagination}}
+    {{ pagination }}
+  | {{/if}}

@@ -1,0 +1,37 @@
+doctype html
+html class="no-js blog" lang="en-US" itemscope="" itemtype="//schema.org/WebPage"
+  head
+
+    / All meta tags and the like is loaded in as a partial
+    | {{> meta }}
+
+    / Load in your stylesheets here if more than the theme.css is needed
+    <link rel="stylesheet" href="{{asset "css/theme.min.css"}}" />
+
+    / Load in any Javascript libraries that must be loaded before the content
+    script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"
+
+    | {{ghost_head}}
+
+  body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog"
+
+    main.wrapper role="main"
+      | {{> header }}
+      | {{{ body }}}
+      | {{> footer }}
+
+    | {{ghost_foot}}
+
+  / Load in Javascript libraries that should be loaded after the content
+  script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+  <script src="{{asset "js/plugins.min.js"}}" />
+  <script src="{{asset "js/scripts.min.js"}}" />
+
+  / Google Analytics, remember to update the UA-code
+  javascript:
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');

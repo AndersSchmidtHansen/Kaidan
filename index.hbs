@@ -1,0 +1,26 @@
+{{!< layouts/master }}{{#foreach posts}}
+<article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
+  <header class="post__header">
+    <time class="post__date" itemprop="datePublished">{{ date format="dddd DD MMM YYYY" }}</time>
+    <h1 class="post__title" itemprop="headline">
+      <a href="{{{ url }}}" rel="bookmark">{{ title }}</a>
+    </h1>
+  </header>
+  <section class="post__content" itemprop="articleBody">
+    {{ excerpt }}...
+  </section>
+  <footer class="post__footer">
+    <div class="post__tags">
+      {{#if tags}}
+      <div class="tags" itemprop="keywords">
+        <span>Tags: {{tags separator=", "}}</span>
+      </div>
+      {{/if}}
+    </div>
+  </footer>
+</article>
+{{/foreach}}
+<div class="blog__pagination">
+  {{#if pagination}}
+  {{ pagination }}{{/if}}
+</div>
