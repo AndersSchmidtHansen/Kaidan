@@ -61,6 +61,11 @@ gulp.task "coffee", ->
   .pipe run.notify message : 'Coffeescript compiled and minified!'
   .pipe reload stream : true, once : true
 
+gulp.task "document", ->
+  gulp.src "./README.md"
+  .pipe run.markdownPdf()
+  .pipe gulp.dest "documentation"
+
 
 # Default
 gulp.task "default", [ "browser-sync", "watch" ]

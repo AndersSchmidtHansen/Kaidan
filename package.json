@@ -29,6 +29,7 @@
     "gulp-rename"      : "latest",
     "gulp-ruby-sass"   : "latest",
     "gulp-uglify"      : "latest",
+    "gulp-markdown-pdf": "latest",
     "gulp-util"        : "latest"
   },
   "scripts": {
