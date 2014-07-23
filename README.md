@@ -49,7 +49,6 @@ Kaidan follows the following folder structure:
 ```
 assets
 documentation
-layouts
 partials
 src (you work in here!)
   | assets

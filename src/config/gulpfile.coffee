@@ -70,7 +70,6 @@ gulp.task "package", ->
   gulp.src [
           "./assets/**/*",
           "./documentation/**/*",
-          "./layouts/**/*",
           "./partials/**/*",
           "./*", "./src/**/*",
           "!./node_modules",
