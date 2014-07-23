@@ -93,6 +93,13 @@ $ gulp document
 This will output a "README.pdf" in the `documentation` folder, ready to be shipped to a marketplace.
 
 
+Creating a `theme.zip` file for marketplaces
+-------------------------------------------------
+Similar to creating README.pdf, Kaidan also includes a `package` command that takes all files (excluding the "node_modules" folder) and neatly packages them into one `theme.zip` file. Use this .zip when uploading to a marketplace like ThemeForest and similar. To do this, run this command:
+```
+$ gulp package
+```
+
 
 Quirks & "Good-to-knows"
 ---------------------------------
