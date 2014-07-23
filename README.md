@@ -1,6 +1,6 @@
 **Version: Experimental Alpha, use with caution!**
 
-Kaidan (怪談 : "Ghost Story")
+![Kaidan Logo: Attribution goes to 7Soul1 at http://7soul1.deviantart.com/](http://i57.tinypic.com/snmn10.png "Kaidan Logo: Attribution goes to 7Soul1 at http://7soul1.deviantart.com/") Kaidan (怪談 : "Ghost Story")
 ==============================
 
 Boilerplate Factory for Ghost Theme Development.
