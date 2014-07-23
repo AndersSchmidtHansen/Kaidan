@@ -66,6 +66,19 @@ gulp.task "document", ->
   .pipe run.markdownPdf()
   .pipe gulp.dest "documentation"
 
+gulp.task "package", ->
+  gulp.src [
+          "./assets/**/*",
+          "./documentation/**/*",
+          "./layouts/**/*",
+          "./partials/**/*",
+          "./*", "./src/**/*",
+          "!./node_modules",
+          "!./.gitignore",
+          "!./.git"], base : "."
+
+  .pipe run.zip "theme.zip"
+  .pipe gulp.dest ""
 
 # Default
 gulp.task "default", [ "browser-sync", "watch" ]
