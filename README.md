@@ -82,6 +82,16 @@ post.hbs
 tag.hbs
 ```
 
+Creating a README.pdf for documentation
+-------------------------------------------------
+It's not unlikely that some of you will use Kaidan to create themes for commercial use, e.g. sell them on ThemeForest. Therefore I want to make it a little easier for you to generate a README.pdf from the included README.md file. To do this, run this command:
+
+```
+$ gulp document
+```
+This will output a "README.pdf" in the `documentation` folder, ready to be shipped to a marketplace.
+
+
 
 Quirks & "Good-to-knows"
 ---------------------------------
