@@ -75,7 +75,9 @@ gulp.task "package", ->
           "./*", "./src/**/*",
           "!./node_modules",
           "!./.gitignore",
-          "!./.git"], base : "."
+          "!./.git",
+          "!./README.md"
+          ], base : "."
 
   .pipe run.zip "theme.zip"
   .pipe gulp.dest ""
