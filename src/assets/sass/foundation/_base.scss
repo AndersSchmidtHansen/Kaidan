@@ -2,6 +2,33 @@
 =            Kaidan - Theme Base Stylesheet            =
 ======================================================*/
 
+/*==========  Core  ==========*/
+html { font-size: 10px; } // Allows better font sizing with REMs
+body {
+  font-family      : $t__body_copy_font_stack;
+  font-size        : $t__default_font_size;
+  line-height      : $t__default_line_height;
+  color            : $c__base_text;
+  background-color : $c__primary;
+}
+
+/*==========  Typography  ==========*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h {
+  font-family: $t__headline_font_stack;
+  font-weight: $t__headline_weight;
+}
+
+a {
+  color: $c__highlight;
+}
+
+/*==========  Blog  ==========*/
 .blog {
 
   /*==========  Blog Header  ==========*/

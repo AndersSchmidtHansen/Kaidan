@@ -6,7 +6,7 @@
 // css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; position: relative; }
-
+a { text-decoration: none; }
 
 
 /*-----  End of Kaidan - Theme Reset  ------*/
