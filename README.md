@@ -7,6 +7,8 @@ Boilerplate Factory for Ghost Theme Development.
 
 Craft your [Ghost](https://ghost.org/) themes with the simplicity of [Slim](slim-lang.com), flexibility of [Sass](sass-lang.com) and the expressiveness of [CoffeeScript](coffeescript.org). Oh, and Kaidan live reloads across multiple devices and browsers thanks to [BrowserSync](www.browsersync.io). How cool is that!
 
+Kaidan is very minimal and is meant to be extended and use as a starting point. Therefore, every Kaidan theme looks [like this](http://www.andersschmidt.com/Kaidan/) in the beginning.
+
 Why?
 -------------------
 I love the whole concept behind Ghost and the potential of it as a fast and simple blogging platform; it just gets things done!
