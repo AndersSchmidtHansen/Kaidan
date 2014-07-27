@@ -1,8 +1,88 @@
-/*===========================================
-=            Kaidan - Theme Base            =
-===========================================*/
+/*======================================================
+=            Kaidan - Theme Base Stylesheet            =
+======================================================*/
+
+.blog {
+
+  /*==========  Blog Header  ==========*/
+  .blog__header {
+
+    .blog__title {
+
+    } /// blog title
+
+    .blog__description {
+
+    } /// blog description
+
+  } /// blog header
 
 
+  /*==========  Blog Footer  ==========*/
+  .blog__footer {
 
-/*-----  End of Kaidan - Theme Base  ------*/
+    .blog__copyright {
+
+    } /// blog copyright
+
+  } /// blog footer
+
+
+  /*==========  Post  ==========*/
+  .post {
+    .post__header {
+
+      .post__date {
+
+      } /// post date
+
+      .post__title {
+
+      } /// post title
+
+    } /// post header
+
+    .post__content {
+
+    } /// post content
+
+    .post__footer {
+
+    } /// post footer
+
+  } /// post
+
+
+  /*==========  Templates  ==========*/
+  .home-template {
+    .post {
+
+    } /// posts on the home page
+  } /// home
+
+  .archive-template {
+    .post {
+
+    } /// posts on the archive page
+  } /// archive
+
+  .post-template {
+    .post {
+
+    } /// post
+  } /// single posts
+
+  .post-template.page {
+    .post {
+
+    } /// the page itself
+  } /// single pages
+
+  .tag-template {
+
+  } /// tag page
+
+} /// blog
+
+/*-----  End of Kaidan - Theme Base Stylesheet  ------*/
 

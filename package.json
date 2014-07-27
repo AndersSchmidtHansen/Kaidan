@@ -19,6 +19,7 @@
     "gulp-coffee"      : "latest",
     "gulp-concat"      : "latest",
     "gulp-ignore"      : "latest",
+    "gulp-replace"     : "latest",
     "gulp-filesize"    : "latest",
     "gulp-slim"        : "latest",
     "gulp-imagemin"    : "latest",

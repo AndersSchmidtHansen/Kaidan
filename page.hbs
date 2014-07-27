@@ -1,1 +1,14 @@
-{{!< default }}
+{{!< default }}{{#post}}
+<article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
+  <header class="post__header">
+    <time class="post__date" itemprop="datePublished">{{ date format="dddd DD MMM YYYY" }}</time>
+    <h1 class="post__title" itemprop="headline">
+      {{ title }}
+    </h1>
+  </header>
+  <section class="post__content" itemprop="articleBody">
+    {{ content }}
+  </section>
+  <footer class="post__footer"></footer>
+</article>
+{{/post}}
