@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="no-js blog" itemscope="" itemtype="//schema.org/WebPage" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<title itemprop="name">Creating Polymer custom elements faster, easier & sexier</title>
+<meta content="" name="description" />
+<meta content="width=device-width, initial-scale=1, minimal-ui" name="viewport" />
+<meta content="" name="google-site-verification" />
+<meta content="Creating Polymer custom elements faster, easier & sexier" property="og:title" />
+<meta content="/2014/07/20/creating-polymer-custom-elements-faster-easier-sexier/" property="og:url" />
+<meta content="" property="og:description" />
+<meta content="/content/images/2014/Jul/blog_bg.jpg" property="og:image" />
+<meta content="yes" name="mobile-web-app-capable" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="Creating Polymer custom elements faster, easier & sexier" name="apple-mobile-web-app-title" />
+<meta content="/content/images/2014/Jul/sod_ash_logo-1.png" name="msapplication-TileImage" />
+<meta content="" name="msapplication-TileColor" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="shortcut icon" sizes="196x196" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="shortcut icon" />
+<link rel="stylesheet" href="../../../../assets/css/style.min.css?v=33955c3a46" /><link rel="stylesheet" href="../../../../assets/css/custom.css?v=33955c3a46" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+    <meta name="generator" content="Ghost 0.4" />
+<link rel="alternate" type="application/rss+xml" title="Sod &amp; Ash" href="../../../../rss/index.html">
+<link rel="canonical" href="http://www.andersschmidt.com/2014/07/20/creating-polymer-custom-elements-faster-easier-sexier/" />
+  </head>
+  <body class="post-template tag-polymer tag-browsersync" itemscope="" itemtype="//schema.org/Blog">
+    <main class="wrapper" role="main"><header class="blog__header">
+  <div class="blog__title">
+    <a href="../../../../index.html" itemprop="name" title="Click to go back to the home page">Sod &amp; Ash</a>
+  </div>
+  <div class="blog__description" itemprop="description">
+    Shenanigans of a digital craftsman &amp; entrepreneur.
+  </div>
+</header>
+
+<article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
+  <header class="post__header">
+    <time class="post__date" itemprop="datePublished">Sunday 20 Jul 2014</time>
+    <h1 class="post__title" itemprop="headline">
+      Creating Polymer custom elements faster, easier &amp; sexier
+    </h1>
+  </header>
+  <section class="post__content" itemprop="articleBody">
+    <p><em>Summary: I made a sweet-ass factory for creating Polymer elements with Slim, Sass, Coffeescript and BrowserSync, served with Gulp. <a href="https://github.com/AndersSchmidtHansen/Abathur">You can get it here</a>.</em></p>
+
+<p>It's no surprise that I have an odd tendency to find myself stumbling along the bleeding edges of web technologies, trying out almost a little too much. "You collect technologies like others collect Pokémon cards!" is something I hear often (ahem <a href="https://twitter.com/chorDK">Lasse</a>!) </p>
+
+<p>I can't help it though, I love learning new things. And my newest addition to my "deck of techs" is <a href="http://polymer-project.org">Polymer</a> - a solution that enables the use of custom web components or "elements" within web projects. After my initial run-ins I don't doubt that web components (not necessarily Polymer per se) will bring on a tectonic shift in the landscape of the web in the coming years, and isn't it awesome that you can already play with it today? I knew you'd think so too!</p>
+
+<h3 id="but">But...</h3>
+
+<p>Creating Polymer elements is quite straightforward out-of-the-box, but it does take the usual "create folder,  install bower and npm, create the typical hello-world element, refresh browser, check, refresh browser, check et cetera"-process to really get started. </p>
+
+<p>In short: It's okay when still playing in the sandbox, but I want a sexier way of going from idea to crafting an element to releasing it.</p>
+
+<h3 id="introducingabathur">Introducing "Abathur"</h3>
+
+<p>Yes, it's a Starcraft reference, and yes it's totally the right name for something that literally spins Polymer elements like it was the easiest thing in the world. By allowing you to use <a href="slim-lang.com">Slim</a>, <a href="http://sass-lang.com/">Sass</a> and <a href="http://coffeescript.org/">CoffeeScript</a> to craft the element and then automatically get it compiled into .html, .min.css and .min.js via <a href="http://gulpjs.com/">Gulp</a> is awesome<sup>10th</sup>. But let's take it to the <sup>11th</sup> and throw in live browser reloading and synchronization between multiple browsers and devices with <a href="www.browsersync.io">BrowserSync</a>. Boom!</p>
+
+<p>Abathur is still in <strong>experimental alpha</strong>, but you can definitely use it to spin som elements already. You'll find Abathur <a href="https://github.com/AndersSchmidtHansen/Abathur">here</a>, ready to download. If you want a small introduction, you can see me stumble like a goose in this video:</p>
+
+<iframe src="https://www.screenr.com/embed/FMRN" width="650" height="396" frameborder="0"></iframe>
+
+<p>Stay awesome out there champs, now get back to building amazing things!</p>
+  </section>
+  <footer class="post__footer"></footer>
+</article>
+
+<footer class="blog__footer">
+  <a href="http://www.andersschmidt.com/rss/" target="_blank">Subscribe</a>
+  <div class="blog__copyright">
+    <span itemprop="copyrightYear">&copy; 2014</span><span> All rights reserved –</span><span itemprop="copyrightHolder"> Sod &amp; Ash</span>
+  </div>
+</footer>
+</main><script src="../../../../public/jquery.js?v=33955c3a46"></script>
+  </body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src='../../../../assets/js/plugins.min.js?v=33955c3a46'></script><script src='../../../../assets/js/scripts.min.js?v=33955c3a46'></script>
+  <script type="text/javascript">
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+</html>

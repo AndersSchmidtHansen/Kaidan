@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Sod & Ash]]></title><description><![CDATA[Shenanigans of a digital craftsman & entrepreneur.]]></description><link>http://www.andersschmidt.com/</link><generator>Ghost v0.4.2</generator><lastBuildDate>Sun, 27 Jul 2014 16:14:36 GMT</lastBuildDate><atom:link href="http://www.andersschmidt.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[My top 4 Adobe Project Parfait features you might love too]]></title><description><![CDATA[<p>What's up evil, creative masterminds of the digital design and development arena? What have you been crafting today? Much? Nothing? In any case, if you have 180 seconds to waste anyway, I just wanted to share a little list of features that I've come to like about Adobe's "comp-to-code" web application called "Project Parfait".</p>
+
+<p>Yep, pop in that PSD and get some nifty information needed for turning that static file into something magic. Pretty simple, but it's nice to see some software that seamlessly accepts a PSD without being a pain in the ass. So without any further ado, here's the top 4 features I like about Project Parfait:</p>
+
+<h2 id="1typographicoverviews">1. Typographic Overviews</h2>
+
+<p>That's right, after uploading the PSD, you can click on text anywhere in the document and see its font family (if on TypeKit), weights and what sizes are being used where. A very nice feature in itself, but what I didn't expect is the ability to switch between different font units. I usually develop in <code>rem</code>, so being able to switch to that unit is really handy (for me, at least).</p>
+
+<h2 id="2elementdistancecalculations">2. Element Distance Calculations</h2>
+
+<p>Project Parfait supports clicking and then shift-clicking on two elements which will give you the x and y distance (in pixels only, it seems) between the two. I've received several PSDs from a graphic designer and sometimes ended up pixel pushing things until it looked right visually, only to eventually jump into the PSD and manually using the ruler tool to calculate the distance. No need for that anymore!</p>
+
+<h2 id="3colorpaletteextraction">3. Color Palette Extraction (!)</h2>
+
+<p>It might seem like a banality, but if I had a dollar for every time I had to either a.) extract a color palette manually because no one supplied me with any web-friendly values or b.) email clients or associated designers for those values I'd finally be able to get that ruby-covered gold scepter I've always wanted... Project Parfait allows you to quickly extract those values and have them ready-at-hand. I like that.</p>
+
+<h2 id="4csscodepreview">4. CSS Code Preview</h2>
+
+<p>This is a no-brainer, but incredibly helpful; click on an element and you will get a (well-)generated CSS code for that element in a previewer window. I know it's simple, but ignoring the width and height code, it makes it very easy to just click, copy and paste into your stylesheet. My only concern is how this fits a workflow involving pre-processors such as Sass or Less. It could be interesting to see if Project Parfait could understand a specific naming convention of a PSDs folder structure that would then translate into neatly organized components... or something along those lines.</p>
+
+<p>Aight, everything must come to an end, <a href='https://projectparfait.adobe.com/' >Project Parfait</a> has more features to offer, and you should give it a little checkout when you get the time. I'll definitely try giving it a spin into my workflow.</p>
+
+<p>Keep awesome!</p>]]></description><link>http://www.andersschmidt.com/2014/07/24/my-top-4-adobe-project-parfait-features-you-might-love-too/</link><guid isPermaLink="false">069fda93-7ba0-48ee-a565-cfcaf057b418</guid><dc:creator><![CDATA[Anders Schmidt Hansen]]></dc:creator><pubDate>Thu, 24 Jul 2014 09:04:23 GMT</pubDate></item><item><title><![CDATA[Convert and create Polymer elements online with Polymeister]]></title><description><![CDATA[<p>Just a quick shoot-out to <a href='http://polymeister.somee.com/' >Polymeister</a>, an online tool that allows you to generate Polymer elements (nested ones even!) easily. It also handles .slim and is currently under development by my good friend and partner in crime <a href='https://github.com/zerratar/' >Karl Patrik Johansson</a>.</p>
+
+<p>Be sure to check it out once in a while to try out more features as the project progresses.</p>]]></description><link>http://www.andersschmidt.com/2014/07/23/convert-and-create-polymer-elements-online-with-polymeister/</link><guid isPermaLink="false">d96a82b1-97cc-4eff-8a7e-2d36f3f6ab87</guid><dc:creator><![CDATA[Anders Schmidt Hansen]]></dc:creator><pubDate>Wed, 23 Jul 2014 19:11:26 GMT</pubDate></item><item><title><![CDATA[Creating Polymer custom elements faster, easier & sexier]]></title><description><![CDATA[<p><em>Summary: I made a sweet-ass factory for creating Polymer elements with Slim, Sass, Coffeescript and BrowserSync, served with Gulp. <a href='https://github.com/AndersSchmidtHansen/Abathur' >You can get it here</a>.</em></p>
+
+<p>It's no surprise that I have an odd tendency to find myself stumbling along the bleeding edges of web technologies, trying out almost a little too much. "You collect technologies like others collect Pokémon cards!" is something I hear often (ahem <a href='https://twitter.com/chorDK' >Lasse</a>!) </p>
+
+<p>I can't help it though, I love learning new things. And my newest addition to my "deck of techs" is <a href='http://polymer-project.org/' >Polymer</a> - a solution that enables the use of custom web components or "elements" within web projects. After my initial run-ins I don't doubt that web components (not necessarily Polymer per se) will bring on a tectonic shift in the landscape of the web in the coming years, and isn't it awesome that you can already play with it today? I knew you'd think so too!</p>
+
+<h3 id="but">But...</h3>
+
+<p>Creating Polymer elements is quite straightforward out-of-the-box, but it does take the usual "create folder,  install bower and npm, create the typical hello-world element, refresh browser, check, refresh browser, check et cetera"-process to really get started. </p>
+
+<p>In short: It's okay when still playing in the sandbox, but I want a sexier way of going from idea to crafting an element to releasing it.</p>
+
+<h3 id="introducingabathur">Introducing "Abathur"</h3>
+
+<p>Yes, it's a Starcraft reference, and yes it's totally the right name for something that literally spins Polymer elements like it was the easiest thing in the world. By allowing you to use <a href='http://www.andersschmidt.com/slim-lang.com' >Slim</a>, <a href='http://sass-lang.com/' >Sass</a> and <a href='http://coffeescript.org/' >CoffeeScript</a> to craft the element and then automatically get it compiled into .html, .min.css and .min.js via <a href='http://gulpjs.com/' >Gulp</a> is awesome<sup>10th</sup>. But let's take it to the <sup>11th</sup> and throw in live browser reloading and synchronization between multiple browsers and devices with <a href='http://www.andersschmidt.com/www.browsersync.io' >BrowserSync</a>. Boom!</p>
+
+<p>Abathur is still in <strong>experimental alpha</strong>, but you can definitely use it to spin som elements already. You'll find Abathur <a href='https://github.com/AndersSchmidtHansen/Abathur' >here</a>, ready to download. If you want a small introduction, you can see me stumble like a goose in this video:</p>
+
+<iframe src='https://www.screenr.com/embed/FMRN'  width="650" height="396" frameborder="0"></iframe>
+
+<p>Stay awesome out there champs, now get back to building amazing things!</p>]]></description><link>http://www.andersschmidt.com/2014/07/20/creating-polymer-custom-elements-faster-easier-sexier/</link><guid isPermaLink="false">e572c561-1ea5-463b-a014-c7f023180a10</guid><category><![CDATA[polymer]]></category><category><![CDATA[browserSync]]></category><dc:creator><![CDATA[Anders Schmidt Hansen]]></dc:creator><pubDate>Sun, 20 Jul 2014 10:47:24 GMT</pubDate></item><item><title><![CDATA[Fast, free blogging with Ghost and GitHub]]></title><description><![CDATA[<p><img src='http://37.media.tumblr.com/1ecfc1ee5d12ecfe0b48c069980609bf/tumblr_n8zm3lrclm1st5lhmo1_1280.jpg'  alt="Image" />
+Blogging has come a very long way technologically, and if you're still wondering how much you need to pay or what host to choose, there's now yet another new and interesting approach; Ghost!</p>
+
+<p>You can learn more about the Ghost blogging platform <a href='https://ghost.org/about/' >here</a>, but in this article I'll cover how to get a Ghost blog up and running at the cost of absolutely nothing. Zero, null, nuffin' (if that's even a word).</p>
+
+<p>All you need is a <a href='https://github.com/join' >GitHub Account</a>, a cup of coffee and a little patience.</p>
+
+<h2 id="steponeprepareagithubrepository">Step one, prepare a GitHub repository</h2>
+
+<p>After creating your GitHub account, follow GitHub's own guide on <a href='https://pages.github.com/' >how to prepare GitHub Pages for your repository</a>.</p>
+
+<p>You should then end up with a repository with an URL of something like:</p>
+
+<pre><code>GitHubUsername.github.io
+</code></pre>
+
+<p>Also, if you want to use a custom domain (highly recommended!), be sure to add a CNAME file (in uppercase!) to your repository. You can do this by going to your repository and click on the + symbol next to your repository's name (in blue). Just name the file CNAME and input the domain you own here.</p>
+
+<p><strong>Notice:</strong> I had to write <code>www.andersschmidt.com</code> even though some guides tell you can write the root version AKA the-one-without-the-www. After that I just forwarded <code>andersschmidt.com</code> to the www-version.</p>
+
+<h3 id="settingupthedns">Setting up the DNS</h3>
+
+<p>With the CNAME file in place, go to your DNS or the company that hosts your domain name and add a CNAME value where the <code>host</code> is <code>www</code> and the <code>destination</code> is <code>GitHubUsername.github.io</code>. I set my TTL to 10 minutes, but you can keep it at 1 hour if you want.</p>
+
+<h2 id="steptwoinstallghost">Step two, install Ghost</h2>
+
+<p>Go <a href='http://docs.ghost.org/installation/' >here</a> for downloads specific to  your operating system (I use Linux / ElementaryOS), download Ghost and follow the installation instructions.</p>
+
+<p>I have my <code>Blog</code> folder inside Dropbox for extra backup, but your mileage may vary. After installing Ghost and confirming that it does actually run, it's time to bring it to GitHub via a sweet  piece of code named Buster.</p>
+
+<h2 id="stepthreeinstallbuster">Step three, install Buster</h2>
+
+<p><a href='https://github.com/axitkhurana/buster' >Buster</a> takes your Ghost blog and turns it into a static site in a format that GitHub likes, meaning that it is possible to bring your blog to the repository you made earlier. Neat huh? And since the repository is free, so is your blog!</p>
+
+<p>To install Buster, you first need <a href='https://pip.pypa.io/en/latest/installing.html' >Pip</a> and how easy it is to install depends on your operating system (on Linux it's easy). After installing Pip you can then run the following in your terminal or console:</p>
+
+<pre><code>pip install buster
+</code></pre>
+
+<p>Remember to have <code>wget</code> installed beforehand, since it's required if you want to use Buster. Most Linux versions have wget by default, but if you're on a Mac, you can run:</p>
+
+<pre><code>brew install wget
+</code></pre>
+
+<p>After Buster is installed, navigate to your Ghost blog's folder and run <code>buster setup</code> to prepare things. You will have to input the URL to your GitHub repository you made earlier for this to work.</p>
+
+<p>Hereon it's pretty straightforward. After starting up Ghost via <code>npm start</code>, go to <a href='http://127.0.0.1:2368/ghost/' >http://127.0.0.1:2368/ghost/</a> and begin writing what you want, preview it locally and when you're ready to push it online, do the following:</p>
+
+<pre><code>buster generate --domain=http://127.0.0.1:2368 &amp;&amp; buster deploy
+</code></pre>
+
+<p>You will be prompted to input your GitHub credentials and if things are correct Buster will push the static site version of your blog to your GitHub repository and prezto, your blog is now live! For free. Isn't that nifty?</p>
+
+<h2 id="optionalstepfasterdeployment">Optional step: faster deployment</h2>
+
+<p>If you're on a NIX-based system like Linux or Mac OS, it is possible to make it less annoying to generate and deploy your Ghost site. I personally think it's tedious to copy and paste the above command every time, so I made a small BASH script you can add to your <code>.bashrc</code> file to speed things up a little:</p>
+
+<pre><code>openGhost(){
+  cd ~/Your/Blog/Folder/;
+  npm start;
+}
+alias ghost=openGhost;
+alias ghostup="sudo buster generate --domain=http://127.0.0.1:2368 &amp;&amp; sudo buster deploy";
+</code></pre>
+
+<p>The <code>ghost</code> command will, if you've correctly changed the <code>Your/Blog/Folder</code> to match the folder your Ghost blog lives in, neatly start up Ghost from wherever you are in your system and the <code>ghostup</code> command will simply run the previous command you had to copy and paste.</p>
+
+<p>It's not much, but if you write a lot it's a neat timesaver.</p>
+
+<p>In closing, enjoy blogging with Ghost for free and help spread the love!</p>]]></description><link>http://www.andersschmidt.com/2014/07/12/fast-free-blogging-with-ghost-and-github/</link><guid isPermaLink="false">5400bd89-9168-45a7-a579-1edb11844f82</guid><dc:creator><![CDATA[Anders Schmidt Hansen]]></dc:creator><pubDate>Sat, 12 Jul 2014 17:46:24 GMT</pubDate></item></channel></rss>

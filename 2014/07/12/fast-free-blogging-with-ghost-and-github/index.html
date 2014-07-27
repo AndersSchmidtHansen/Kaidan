@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js blog" itemscope="" itemtype="//schema.org/WebPage" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<title itemprop="name">Fast, free blogging with Ghost and GitHub</title>
+<meta content="" name="description" />
+<meta content="width=device-width, initial-scale=1, minimal-ui" name="viewport" />
+<meta content="" name="google-site-verification" />
+<meta content="Fast, free blogging with Ghost and GitHub" property="og:title" />
+<meta content="/2014/07/12/fast-free-blogging-with-ghost-and-github/" property="og:url" />
+<meta content="" property="og:description" />
+<meta content="/content/images/2014/Jul/blog_bg.jpg" property="og:image" />
+<meta content="yes" name="mobile-web-app-capable" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="Fast, free blogging with Ghost and GitHub" name="apple-mobile-web-app-title" />
+<meta content="/content/images/2014/Jul/sod_ash_logo-1.png" name="msapplication-TileImage" />
+<meta content="" name="msapplication-TileColor" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="shortcut icon" sizes="196x196" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="apple-touch-icon-precomposed" />
+<link href="../../../../content/images/2014/Jul/sod_ash_logo-1.png" rel="shortcut icon" />
+<link rel="stylesheet" href="../../../../assets/css/style.min.css?v=33955c3a46" /><link rel="stylesheet" href="../../../../assets/css/custom.css?v=33955c3a46" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+    <meta name="generator" content="Ghost 0.4" />
+<link rel="alternate" type="application/rss+xml" title="Sod &amp; Ash" href="../../../../rss/index.html">
+<link rel="canonical" href="http://www.andersschmidt.com/2014/07/12/fast-free-blogging-with-ghost-and-github/" />
+  </head>
+  <body class="post-template" itemscope="" itemtype="//schema.org/Blog">
+    <main class="wrapper" role="main"><header class="blog__header">
+  <div class="blog__title">
+    <a href="../../../../index.html" itemprop="name" title="Click to go back to the home page">Sod &amp; Ash</a>
+  </div>
+  <div class="blog__description" itemprop="description">
+    Shenanigans of a digital craftsman &amp; entrepreneur.
+  </div>
+</header>
+
+<article class="post" itemscope="" itemtype="//schema.org/Article" role="article">
+  <header class="post__header">
+    <time class="post__date" itemprop="datePublished">Saturday 12 Jul 2014</time>
+    <h1 class="post__title" itemprop="headline">
+      Fast, free blogging with Ghost and GitHub
+    </h1>
+  </header>
+  <section class="post__content" itemprop="articleBody">
+    <p><img src="http://37.media.tumblr.com/1ecfc1ee5d12ecfe0b48c069980609bf/tumblr_n8zm3lrclm1st5lhmo1_1280.jpg" alt="Image" />
+Blogging has come a very long way technologically, and if you're still wondering how much you need to pay or what host to choose, there's now yet another new and interesting approach; Ghost!</p>
+
+<p>You can learn more about the Ghost blogging platform <a href="https://ghost.org/about/">here</a>, but in this article I'll cover how to get a Ghost blog up and running at the cost of absolutely nothing. Zero, null, nuffin' (if that's even a word).</p>
+
+<p>All you need is a <a href="https://github.com/join">GitHub Account</a>, a cup of coffee and a little patience.</p>
+
+<h2 id="steponeprepareagithubrepository">Step one, prepare a GitHub repository</h2>
+
+<p>After creating your GitHub account, follow GitHub's own guide on <a href="https://pages.github.com/">how to prepare GitHub Pages for your repository</a>.</p>
+
+<p>You should then end up with a repository with an URL of something like:</p>
+
+<pre><code>GitHubUsername.github.io
+</code></pre>
+
+<p>Also, if you want to use a custom domain (highly recommended!), be sure to add a CNAME file (in uppercase!) to your repository. You can do this by going to your repository and click on the + symbol next to your repository's name (in blue). Just name the file CNAME and input the domain you own here.</p>
+
+<p><strong>Notice:</strong> I had to write <code>www.andersschmidt.com</code> even though some guides tell you can write the root version AKA the-one-without-the-www. After that I just forwarded <code>andersschmidt.com</code> to the www-version.</p>
+
+<h3 id="settingupthedns">Setting up the DNS</h3>
+
+<p>With the CNAME file in place, go to your DNS or the company that hosts your domain name and add a CNAME value where the <code>host</code> is <code>www</code> and the <code>destination</code> is <code>GitHubUsername.github.io</code>. I set my TTL to 10 minutes, but you can keep it at 1 hour if you want.</p>
+
+<h2 id="steptwoinstallghost">Step two, install Ghost</h2>
+
+<p>Go <a href="http://docs.ghost.org/installation/">here</a> for downloads specific to  your operating system (I use Linux / ElementaryOS), download Ghost and follow the installation instructions.</p>
+
+<p>I have my <code>Blog</code> folder inside Dropbox for extra backup, but your mileage may vary. After installing Ghost and confirming that it does actually run, it's time to bring it to GitHub via a sweet  piece of code named Buster.</p>
+
+<h2 id="stepthreeinstallbuster">Step three, install Buster</h2>
+
+<p><a href="https://github.com/axitkhurana/buster">Buster</a> takes your Ghost blog and turns it into a static site in a format that GitHub likes, meaning that it is possible to bring your blog to the repository you made earlier. Neat huh? And since the repository is free, so is your blog!</p>
+
+<p>To install Buster, you first need <a href="https://pip.pypa.io/en/latest/installing.html">Pip</a> and how easy it is to install depends on your operating system (on Linux it's easy). After installing Pip you can then run the following in your terminal or console:</p>
+
+<pre><code>pip install buster
+</code></pre>
+
+<p>Remember to have <code>wget</code> installed beforehand, since it's required if you want to use Buster. Most Linux versions have wget by default, but if you're on a Mac, you can run:</p>
+
+<pre><code>brew install wget
+</code></pre>
+
+<p>After Buster is installed, navigate to your Ghost blog's folder and run <code>buster setup</code> to prepare things. You will have to input the URL to your GitHub repository you made earlier for this to work.</p>
+
+<p>Hereon it's pretty straightforward. After starting up Ghost via <code>npm start</code>, go to <a href="../../../../ghost/index.html">http://127.0.0.1:2368/ghost/</a> and begin writing what you want, preview it locally and when you're ready to push it online, do the following:</p>
+
+<pre><code>buster generate --domain=http://127.0.0.1:2368 &amp;&amp; buster deploy
+</code></pre>
+
+<p>You will be prompted to input your GitHub credentials and if things are correct Buster will push the static site version of your blog to your GitHub repository and prezto, your blog is now live! For free. Isn't that nifty?</p>
+
+<h2 id="optionalstepfasterdeployment">Optional step: faster deployment</h2>
+
+<p>If you're on a NIX-based system like Linux or Mac OS, it is possible to make it less annoying to generate and deploy your Ghost site. I personally think it's tedious to copy and paste the above command every time, so I made a small BASH script you can add to your <code>.bashrc</code> file to speed things up a little:</p>
+
+<pre><code>openGhost(){
+  cd ~/Your/Blog/Folder/;
+  npm start;
+}
+alias ghost=openGhost;
+alias ghostup="sudo buster generate --domain=http://127.0.0.1:2368 &amp;&amp; sudo buster deploy";
+</code></pre>
+
+<p>The <code>ghost</code> command will, if you've correctly changed the <code>Your/Blog/Folder</code> to match the folder your Ghost blog lives in, neatly start up Ghost from wherever you are in your system and the <code>ghostup</code> command will simply run the previous command you had to copy and paste.</p>
+
+<p>It's not much, but if you write a lot it's a neat timesaver.</p>
+
+<p>In closing, enjoy blogging with Ghost for free and help spread the love!</p>
+  </section>
+  <footer class="post__footer"></footer>
+</article>
+
+<footer class="blog__footer">
+  <a href="http://www.andersschmidt.com/rss/" target="_blank">Subscribe</a>
+  <div class="blog__copyright">
+    <span itemprop="copyrightYear">&copy; 2014</span><span> All rights reserved –</span><span itemprop="copyrightHolder"> Sod &amp; Ash</span>
+  </div>
+</footer>
+</main><script src="../../../../public/jquery.js?v=33955c3a46"></script>
+  </body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src='../../../../assets/js/plugins.min.js?v=33955c3a46'></script><script src='../../../../assets/js/scripts.min.js?v=33955c3a46'></script>
+  <script type="text/javascript">
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+</html>
