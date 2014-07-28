@@ -32,7 +32,7 @@ gulp.task 'slim', ->
   gulp.src paths.slim
   .pipe run.changed "./", extension : ".slim"
   .pipe run.plumber()
-  .pipe run.slim pretty : true, options : ['']
+  .pipe run.slim pretty : true, options : "attr_delims={'('=>')','['=>']'}"
   .pipe run.rename extname : ".hbs"
   .pipe gulp.dest ""
   .pipe reload stream : true, once : true

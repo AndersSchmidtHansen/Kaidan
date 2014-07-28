@@ -6,7 +6,17 @@
     {{ghost_head}}
   </head>
   <body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog">
-    <main class="wrapper" role="main">{{> header }}{{{ body }}}{{> footer }}</main>{{ghost_foot}}
+    <main class="wrapper" role="main">
+      <header class="blog__header">
+        {{> header }}
+      </header>
+      <section class="blog__content">
+        {{{ body }}}
+      </section>
+      <footer class="blog__footer">
+        {{> footer }}
+      </footer>
+    </main>{{ghost_foot}}
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src='{{asset "js/plugins.min.js"}}'></script><script src='{{asset "js/scripts.min.js"}}'></script>
