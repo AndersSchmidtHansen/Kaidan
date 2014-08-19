@@ -40,7 +40,7 @@ gulp.task 'slim', ->
 gulp.task "sass", ->
   gulp.src paths.sass
   .pipe run.plumber()
-  .pipe run.rubySass sourcemap : false, style : 'compressed', sourcemapPath : "src/sass/maps"
+  .pipe run.rubySass sourcemap : false, style : 'compressed', sourcemapPath : "src/sass/maps", noCache : true
   .pipe run.autoprefixer 'last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4'
   .pipe run.rename { suffix : '.min' }
   .pipe run.minifyCss()

@@ -1,0 +1,24 @@
+| {{!< default }}
+| {{#author}}
+
+article.page.author--page role="article" itemscope="" itemtype="//schema.org/Person"
+
+  a href="{{ url }}rss/" title="Click to view the RSS feed of {{ name }}" Subscribe to {{ name }}
+
+  section.author-profile itemprop="author"
+
+  | {{#if image}}
+  figure.author__image
+    .img.img--64x64 style="background-image: url({{ image }})"
+  | {{/if}}
+  h1.author__title itemprop="name" {{ name }}
+  h2.author__bio itemprop="description" {{ bio }}
+  .author__meta
+
+    | {{#if location}}
+    .author__location itemprop="homeLocation" {{ location }}
+    | {{/if}}
+
+
+
+| {{/author}}

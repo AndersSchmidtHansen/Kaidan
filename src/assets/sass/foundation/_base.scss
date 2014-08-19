@@ -28,6 +28,19 @@ a {
   color: $c__highlight;
 }
 
+/*==========  Elements  ==========*/
+.img {
+  min-width: 50px;
+  min-height: 50px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.img--64x64 {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 /*==========  Blog  ==========*/
 .blog {
 

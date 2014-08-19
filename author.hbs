@@ -1,0 +1,24 @@
+{{!< default }}{{#author}}
+<article class="page author--page" itemscope="" itemtype="//schema.org/Person" role="article">
+  <a href="{{ url }}rss/" title="Click to view the RSS feed of {{ name }}">Subscribe to {{ name }}</a>
+  <section class="author-profile" itemprop="author"></section>
+  {{#if image}}
+  <figure class="author__image">
+    <div class="img img--64x64" style="background-image: url({{ image }})"></div>
+  </figure>
+  {{/if}}
+  <h1 class="author__title" itemprop="name">
+    {{ name }}
+  </h1>
+  <h2 class="author__bio" itemprop="description">
+    {{ bio }}
+  </h2>
+  <div class="author__meta">
+    {{#if location}}
+    <div class="author__location" itemprop="homeLocation">
+      {{ location }}
+    </div>
+    {{/if}}
+  </div>
+</article>
+{{/author}}
