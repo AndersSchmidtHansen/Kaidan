@@ -77,11 +77,13 @@ src (you work in here!)
   page.slim
   post.slim
   tag.slim
+  author.slim
 
 index.hbs
 page.hbs
 post.hbs
 tag.hbs
+author.hbs
 ```
 
 Creating a README.pdf for documentation
