@@ -23,8 +23,7 @@ paths =
 
 # BrowserSync
 gulp.task 'browser-sync', ->
-  browserSync.init null,
-    notify : true
+  browserSync
     proxy : "127.0.0.1:2368"
 
 # Tasks
@@ -38,12 +37,15 @@ gulp.task 'slim', ->
   .pipe reload stream : true, once : true
 
 gulp.task "sass", ->
-  run.rubySass 'src/assets/sass/style.scss', sourcemap : false, style : 'compressed', noCache : true
+  run.rubySass 'src/assets/sass/style.scss', sourcemap : true, style : 'compressed', noCache : true
+  .pipe run.sourcemaps.init()
   .pipe run.autoprefixer 'last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4'
   .pipe run.rename { suffix : '.min' }
   .pipe run.minifyCss()
   .pipe run.filesize()
+  .pipe run.sourcemaps.write()
   .pipe gulp.dest "assets/css/"
+  .pipe run.filter '**/*.css'    # Filter out sourcemaps
   .pipe run.notify message : 'SASS compiled and minified!'
   .pipe reload stream : true
 
@@ -80,7 +82,7 @@ gulp.task "package", ->
   .pipe gulp.dest ""
 
 # Default
-gulp.task "default", [ "browser-sync", "watch" ]
+gulp.task "default", [ "browser-sync", "sass", "watch" ]
 
 # Watch
 gulp.task "watch", ['browser-sync'], () ->
