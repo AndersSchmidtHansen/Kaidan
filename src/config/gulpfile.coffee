@@ -23,8 +23,7 @@ paths =
 
 # BrowserSync
 gulp.task 'browser-sync', ->
-  browserSync.init null,
-    notify : true
+  browserSync
     proxy : "127.0.0.1:2368"
 
 # Tasks
@@ -80,7 +79,7 @@ gulp.task "package", ->
   .pipe gulp.dest ""
 
 # Default
-gulp.task "default", [ "browser-sync", "watch" ]
+gulp.task "default", [ "browser-sync", "sass", "watch" ]
 
 # Watch
 gulp.task "watch", ['browser-sync'], () ->
