@@ -43,7 +43,7 @@ gulp.task "sass", ->
   .pipe run.rename { suffix : '.min' }
   .pipe run.minifyCss()
   .pipe run.filesize()
-  .pipe run.sourcemaps.write 'maps', includeContent: false, sourceRoot: '../../../src/assets/sass'
+  .pipe run.sourcemaps.write() # 'maps', includeContent: false, sourceRoot: '../../../src/assets/sass'
   .pipe gulp.dest "assets/css/"
   .pipe run.filter '**/*.css'    # Filter out sourcemaps
   .pipe run.notify message : 'SASS compiled and minified!'
