@@ -1,91 +1,31 @@
-###
-|--------------------------------------------------------------------------
+### 
+| ----------------------------------------------------------------
 | Gulpfile
-|--------------------------------------------------------------------------
+| ----------------------------------------------------------------
+| 
+| This acts as the primary "hub" for Gulp to find the necessary
+| tasks needed for pre-processing Slim, Sass and CoffeeScript.
+| As you can see, the file is very "slim" itself because of
+| all the tasks being modularized and loaded in by the
+| "Modularized Task Loader" inside `gulp.litcoffee`.
 |
-| Configuration file for Gulp.
+| You'll find all the tasks within the `tasks`
+| folder. To know more about how this works,
+| I've written an article about it here:
+| http://bit.ly/1IJqdWD.
 |
 ###
 
-# Load the plugins automatically
-gulp        = require "gulp"
-run         = require("gulp-load-plugins")()
-browserSync = require "browser-sync"
-args        = require("yargs").argv
-fs          = require "fs"
-reload      = browserSync.reload
+tasks = [
+  'serve',
+  'slim',
+  'sass',
+  'coffee',
+  'package',
+  'document'
+]
 
-# Paths
-paths =
-  slim            : [ "src/**/*.slim" ]
-  sass            : [ "src/assets/sass/**/*.scss" ]
-  coffee          : [ "src/assets/coffeescript/**/*.coffee" ]
+gulp = require('./gulp')(tasks)
 
-# BrowserSync
-gulp.task 'browser-sync', ->
-  browserSync
-    proxy : "127.0.0.1:2368"
+gulp.task "default", ['serve']
 
-# Tasks
-gulp.task 'slim', ->
-  gulp.src paths.slim
-  .pipe run.changed "./", extension : ".slim"
-  .pipe run.plumber()
-  .pipe run.slim pretty : true, options : "attr_delims={'('=>')','['=>']'}"
-  .pipe run.rename extname : ".hbs"
-  .pipe gulp.dest ""
-  .pipe reload stream : true, once : true
-
-gulp.task "sass", ->
-  run.rubySass 'src/assets/sass/', sourcemap : true, style : 'compressed', noCache : true
-  .pipe run.sourcemaps.init()
-  .pipe run.autoprefixer 'last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4'
-  .pipe run.rename { suffix : '.min' }
-  .pipe run.minifyCss()
-  .pipe run.filesize()
-  .pipe run.sourcemaps.write() # 'maps', includeContent: false, sourceRoot: '../../../src/assets/sass'
-  .pipe gulp.dest "assets/css/"
-  .pipe run.filter '**/*.css'    # Filter out sourcemaps
-  .pipe run.notify message : 'SASS compiled and minified!'
-  .pipe reload stream : true
-
-gulp.task "coffee", ->
-  gulp.src paths.coffee
-  .pipe run.plumber()
-  .pipe run.include extensions : "coffee"
-  .pipe run.coffee bare : true
-  .pipe run.concat( "scripts.min.js" )
-  .pipe run.uglify()
-  .pipe run.filesize()
-  .pipe gulp.dest "assets/js/"
-  .pipe run.notify message : 'Coffeescript compiled and minified!'
-  .pipe reload stream : true, once : true
-
-gulp.task "document", ->
-  gulp.src "./README.md"
-  .pipe run.markdownPdf()
-  .pipe gulp.dest "documentation"
-
-gulp.task "package", ->
-  gulp.src [
-          "./assets/**/*",
-          "./documentation/**/*",
-          "./partials/**/*",
-          "./*", "./src/**/*",
-          "!./node_modules",
-          "!./.gitignore",
-          "!./.git",
-          "!./README.md"
-          ], base : "../"
-
-  .pipe run.zip "theme.zip"
-  .pipe gulp.dest ""
-
-# Default
-gulp.task "default", [ "browser-sync", "sass", "watch" ]
-
-# Watch
-gulp.task "watch", ['browser-sync'], () ->
-  gulp.watch paths.slim,        ['slim']
-  gulp.watch paths.sass,        ['sass']
-  gulp.watch paths.coffee,      ['coffee']

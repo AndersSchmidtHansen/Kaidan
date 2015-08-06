@@ -3,6 +3,6 @@
 #=================================================
 
 $ ->
-  console.log "Kaidan is locked and loaded..."
+  console.log "Kaidan is locked and loaded.."
 
 #-----  End of Kaidan - Theme Scripts  -----------

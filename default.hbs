@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js blog" itemscope="" itemtype="//schema.org/WebPage" lang="en-US">
   <head>
-    {{> meta }}
-    <link rel="stylesheet" href="{{asset "css/style.min.css"}}" />
-    <link rel="stylesheet" href="{{asset "css/custom.min.css"}}" />
-    {{ghost_head}}
+    {{> meta }}<link href="//fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet"><link href="{{asset "/css/style.min.css"}}" rel="stylesheet"><link href="{{asset "/css/custom.min.css"}}" rel="stylesheet">{{ghost_head}}
   </head>
   <body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog">
     <main class="wrapper" role="main">
@@ -21,12 +18,4 @@
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src='{{asset "js/plugins.min.js"}}'></script><script src='{{asset "js/scripts.min.js"}}'></script>
-  <script type="text/javascript">
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
-  </script>
 </html>
