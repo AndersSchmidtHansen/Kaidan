@@ -5,7 +5,9 @@
 
 My Toolkit for Ghost Theme Development.
 
-Craft your [Ghost](https://ghost.org/) themes with the simplicity of [Slim](slim-lang.com), flexibility of [Sass](sass-lang.com) and the expressiveness of [CoffeeScript](coffeescript.org). Oh, and Kaidan live reloads across multiple devices and browsers thanks to [BrowserSync](www.browsersync.io). How cool is that!
+Craft your [Ghost](https://ghost.org/) themes with the flexibility of [Sass](sass-lang.com) and the expressiveness of [CoffeeScript](coffeescript.org). 
+
+Get live reloading across multiple devices and browsers thanks to [BrowserSync](www.browsersync.io). How cool is that!
 
 Kaidan is minimal and is meant to be extended and used as a starting point. Therefore, every Kaidan theme looks very plain in the beginning.
 
@@ -13,7 +15,7 @@ Why?
 -------------------
 I love the whole concept behind Ghost and the potential of it as a fast and simple blogging platform; it gets things done!
 
-Naturally, I'd want to use the tools I use every day for development (Slim, Sass, CoffeeScript etc.) when making Ghost themes, so that's why I made Kaidan. As simple as that.
+Naturally, I'd want to use the tools I use every day for development (Sass, CoffeeScript etc.) when making Ghost themes, so that's why I made Kaidan. As simple as that.
 
 You might like it too, or you might benefit more from rolling your own toolkit. In any case, have fun creating awesome themes for an awesome blogging platform!
 
@@ -55,6 +57,8 @@ partials
 src (you work in here!)
   | assets
     | coffeescript
+      scripts.coffee
+      
     | sass (follows MVCSS principles)
       | components
       | foundation
@@ -65,26 +69,15 @@ src (you work in here!)
         _tools.scss
       | structures
       theme.scss (acts as an importer)
+
   | config
     | tasks
       coffee.coffee
       document.coffee
       package.coffee
       sass.coffee
-      slim.coffee
     gulp.coffee
     gulpfile.coffee
-  | layouts
-    master.slim
-  | partials
-    footer.slim
-    header.slim
-    meta.slim
-  index.slim
-  page.slim
-  post.slim
-  tag.slim
-  author.slim
 
 index.hbs
 page.hbs
@@ -121,9 +114,6 @@ Quirks & "Good-to-knows"
 2. **If something REALLY doesn't update, restart Ghost and run Gulp again or reload the page manually.** Very rarely, files within Kaidan didn't update regardless of what I did, but after either a manual refresh or restarting both Ghost and Gulp, things worked again.
 
 3. **You CAN add and remove new files, but be aware that it might stop Gulp at times.** I have succesfully added and removed .scss files and .coffee files without BrowserSync crashing or Gulp stopping at all. If yours crash,  restart Ghost and Gulp.
-
-4. **Handlebars.js and Slim like each other,  not as much as you'd want.** Slim handles curly brackets in a funny way and you need to keep two things in mind if, say a `{{@blog.title}}` etc. doesn't appear. First, **conditionals and loops need to start with a `|` character.** Second, **study `index.slim` to learn how inserting content tags works**.
-
 
 
 
