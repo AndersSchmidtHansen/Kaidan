@@ -18,7 +18,6 @@
 
 tasks = [
   'serve',
-  'slim',
   'sass',
   'coffee',
   'package',

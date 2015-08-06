@@ -24,6 +24,6 @@ module.exports = (gulp, run, bs, reload, paths) ->
 
       gulp.watch paths.sass,   ['sass']
       gulp.watch paths.coffee, ['coffee']
-      gulp.watch paths.slim,   ['slim']
+      gulp.watch paths.hbs, bs.reload
 
       
