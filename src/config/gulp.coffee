@@ -18,7 +18,7 @@ fs      = require "fs"
 reload  = bs.reload
 
 paths  =
-  slim    : [ "src/*.slim", "src/partials/**/*.slim" ]
+  slim    : [ "src/**/*.slim", ]
   sass    : [ "src/assets/sass/**/*.scss" ]
   coffee  : [ "src/assets/coffeescript/**/*.coffee" ]
   hbs     : [ "!./node_modules/**/*.hbs", "./default.hbs"]
