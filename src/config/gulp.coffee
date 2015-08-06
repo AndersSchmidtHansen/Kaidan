@@ -21,8 +21,6 @@ paths  =
   sass    : [ "src/assets/sass/**/*.scss" ]
   coffee  : [ "src/assets/coffeescript/**/*.coffee" ]
   hbs     : [ "!./node_modules/**/*.hbs", "./*.hbs", "partials/*.hbs"]
-  js      : [ "assets/js/*.js" ]
-  css     : [ "assets/css/*.css" ]
 
 module.exports = (tasks) ->
   tasks.forEach (name) ->
