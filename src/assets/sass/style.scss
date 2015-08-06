@@ -2,21 +2,32 @@
 =            Kaidan - Theme Stylesheet            =
 =================================================*/
 
-// Import foundations: the tools, materials and 
-// ground level.
+
+/** 
+ * Import foundations: the tools, materials and
+ * ground level.
+ */
+
 @import "foundation/reset";
 @import "foundation/helpers";
 @import "foundation/config";
 @import "foundation/base";
 @import "foundation/tools";
 
-// Import components: the individual windows, 
-// doors etc.
+/**
+ * Import components: the individual windows, 
+ * doors etc.
+ */
+
 @import "components/grid";
 
-// Import structures: the composition of 
-// components forming a larger whole, like 
-// windows and doors creating a wall.
-// @import "./custom.scss";
+/**
+ * Import structures: the composition of
+ * components forming a larger whole, like 
+ * windows and doors creating a wall.
+ *
+ * @import "./custom.scss";
+ */
+
 
 /*-----  End of Kaidan - Theme Stylesheet  ------*/

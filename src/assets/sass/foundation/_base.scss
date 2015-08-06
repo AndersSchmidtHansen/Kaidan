@@ -2,17 +2,23 @@
 =            Kaidan - Theme Base Stylesheet            =
 ======================================================*/
 
+
 /*==========  Core  ==========*/
-html { font-size: 10px; } // Allows better font sizing with REMs
+
+html {
+  font-size: 10px;
+} // Allows better font sizing with REMs
 body {
-  font-family      : $t__body_copy_font_stack;
-  font-size        : $t__default_font_size;
-  line-height      : $t__default_line_height;
-  color            : $c__base_text;
-  background-color : $c__primary;
+  font-family: $t__body_copy_font_stack;
+  font-size: $t__default_font_size;
+  line-height: $t__default_line_height;
+  color: $c__base_text;
+  background-color: $c__primary;
 }
 
+
 /*==========  Typography  ==========*/
+
 h1,
 h2,
 h3,
@@ -28,7 +34,9 @@ a {
   color: $c__highlight;
 }
 
+
 /*==========  Elements  ==========*/
+
 .img {
   min-width: 50px;
   min-height: 50px;
@@ -41,87 +49,54 @@ a {
   }
 }
 
-/*==========  Blog  ==========*/
-.blog {
 
+/*==========  Blog  ==========*/
+
+.blog {
   /*==========  Blog Header  ==========*/
   .blog__header {
-
-    .blog__title {
-
-    } /// blog title
-
-    .blog__description {
-
-    } /// blog description
-
+    .blog__title {}
+    /// blog title
+    .blog__description {}
+    /// blog description
   } /// blog header
-
-
   /*==========  Blog Footer  ==========*/
   .blog__footer {
-
-    .blog__copyright {
-
-    } /// blog copyright
-
+    .blog__copyright {}
+    /// blog copyright
   } /// blog footer
-
-
   /*==========  Post  ==========*/
   .post {
     .post__header {
-
-      .post__date {
-
-      } /// post date
-
-      .post__title {
-
-      } /// post title
-
+      .post__date {}
+      /// post date
+      .post__title {}
+      /// post title
     } /// post header
-
-    .post__content {
-
-    } /// post content
-
-    .post__footer {
-
-    } /// post footer
-
+    .post__content {}
+    /// post content
+    .post__footer {}
+    /// post footer
   } /// post
-
-
   /*==========  Templates  ==========*/
   .home-template {
-    .post {
-
-    } /// posts on the home page
+    .post {}
+    /// posts on the home page
   } /// home
-
   .archive-template {
-    .post {
-
-    } /// posts on the archive page
+    .post {}
+    /// posts on the archive page
   } /// archive
-
   .post-template {
-    .post {
-
-    } /// post
+    .post {}
+    /// post
   } /// single posts
-
   .post-template.page {
-    .post {
-
-    } /// the page itself
+    .post {}
+    /// the page itself
   } /// single pages
-
-  .tag-template {
-
-  } /// tag page
-
+  .tag-template {}
+  /// tag page
 } /// blog
 
 /*-----  End of Kaidan - Theme Base Stylesheet  ------*/

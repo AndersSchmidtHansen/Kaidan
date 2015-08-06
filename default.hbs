@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html class="no-js blog" itemscope="" itemtype="//schema.org/WebPage" lang="en-US">
-  <head>
-    {{> meta }}<link href="//fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet"><link href="{{asset "/css/style.min.css"}}" rel="stylesheet"><link href="{{asset "/css/custom.min.css"}}" rel="stylesheet">{{ghost_head}}
-  </head>
-  <body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog">
-    <main class="wrapper" role="main">
-      <header class="blog__header">
-        {{> header }}
-      </header>
-      <section class="blog__content">
-        {{{ body }}}
-      </section>
-      <footer class="blog__footer">
-        {{> footer }}
-      </footer>
-    </main>{{ghost_foot}}
-  </body>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src='{{asset "js/plugins.min.js"}}'></script><script src='{{asset "js/scripts.min.js"}}'></script>
+
+    <head>
+        {{> meta }}
+        <link href="//fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+        <link href="{{asset "/css/style.min.css"}}" rel="stylesheet">
+        <link href="{{asset "/css/custom.min.css"}}" rel="stylesheet"> {{ghost_head}}
+    </head>
+
+    <body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog">
+        <main class="wrapper" role="main">
+            <header class="blog__header">
+                {{> header }}
+            </header>
+            <section class="blog__content">
+                {{{ body }}}
+            </section>
+            <footer class="blog__footer">
+                {{> footer }}
+            </footer>
+        </main>
+        {{ghost_foot}}
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='{{asset "js/plugins.min.js"}}'></script>
+    <script src='{{asset "js/scripts.min.js"}}'></script>
+
 </html>
+
